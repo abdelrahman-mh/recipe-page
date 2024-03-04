@@ -1,0 +1,48 @@
+.hero {
+  width: 100%;
+  border-radius: 18px;
+
+  .container {
+    @include screen-fill(down) {
+      padding-inline: 0;
+    }
+  }
+
+  &__image-cont {
+    padding-inline: 32px;
+    @include breakpoint-up(medium) {
+      padding-inline: 40px;
+    }
+    @include screen-fill(down) {
+      padding-inline: 0;
+    }
+  }
+  &__image {
+    width: 100%;
+    display: block;
+
+    @include screen-fill(up) {
+      border-radius: 15px;
+    }
+  }
+
+  &__header {
+    margin-top: 40px;
+  }
+
+  &__preparation {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: $rose-white;
+    border-radius: 15px;
+  }
+
+  &__preparation-list {
+    margin-top: 16px;
+    li > span {
+      font-weight: 700;
+      color: $dark-Charcoal;
+  }
+    
+  }
+}

@@ -1,34 +1,35 @@
 .fs-young {
-   font-family: $young-serif-font;
+  font-family: $young-serif-font;
 }
 .fs-outfit {
-   font-family: $outfit-font;
+  font-family: $outfit-font;
 }
-.h-lg {
-   font-family: $young-serif-font;
-   font-size: 30px;
-   font-weight: 400;
-   @include media-query(gt-xs){
-      font-size: 50px;
-   }
 
+.recipe__header {
+  color: $dark-Charcoal;
+  font-family: $young-serif-font;
+  font-size: 35px;
+  font-weight: 400;
+  @include breakpoint-up(medium) {
+    font-size: 40px;
+  }
 }
-.h-md {
-   font-family: $young-serif-font;
-   font-size: 30;
+.section__header {
+  font-family: $young-serif-font;
+  margin-top: 0;
+  font-size: 27px;
+  color: $nutmeg;
+  font-weight: 400;
 }
-.h-sm {
-   font-family: $outfit-font;
-   font-size: 18px;
+
+.main-p {
+  font-family: $outfit-font;
+  font-size: 16px;
+  color: $wenge-brown;
+  line-height: 1.5rem;
 }
-.m-p {
-   font-family: $outfit-font;
-   font-size: 16px;
-   > span {
-      font-weight: 700;
-   }
-}
-.m-p {
-   font-family: $outfit-font;
-   font-size: 16px;
+.preparation-title {
+  color: $dark-Raspberry;
+  font-size: 21px;
+  font-weight: 600;
 }

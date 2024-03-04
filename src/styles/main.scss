@@ -1,9 +1,12 @@
+@import './utils/variables';
 @import './base/reset';
-@import './variables';
 @import './utils/mixins';
 
 @import './base/global';
 @import './base/typography';
 
 // component
-@import './components/landing';
+@import './components/hero';
+@import './components/instuctions';
+@import './components/nutrition';
+@import './components/ingrediwnts';

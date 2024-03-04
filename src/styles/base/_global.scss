@@ -1,68 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-   background-color: $white;
+  background-color: $eggshell;
+  width: 100%;
+  @include screen-fill(up) {
+    border: 1px solid $light-grey;
+
+    padding: 122px 0;
+  }
 }
 
+.root {
+  margin: auto;
+  position: relative;
+  background-color: $white;
+  padding: {
+    top: 40px;
+  }
+
+  width: 100%;
+  max-width: $max-cont-size; // like design says!
+  @include breakpoint-down(small) {
+    padding-top: 32px;
+  }
+
+  @include screen-fill(down) {
+    padding-block: 0;
+  }
+  @include screen-fill(up) {
+    border-radius: $container-top-bottom-rad;
+  }
+}
 .container {
-   margin: auto;
-   position: relative;
-   border: 2px dashed black;
-
-   @include media-query(gt-xs) {
-      padding: {
-         left: 40px;
-         right: 40px;
-      }
-   }
-   @include media-query(gt-sm) {
-      padding: {
-         left: 60px;
-         right: 60px;
-      }
-   }
-   @include media-query(lt-xl) {
-      width: 100%;
-   }
-   @include media-query(gt-lg) {
-      width: 1440px;
-   }
-   // section {
-   //    padding: 20px;
-   //    margin-bottom: 20px;
-   // }
-}
-
-.flex__center {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  margin:auto;
+  width: calc(100% - 64px);
+  @include breakpoint-up(medium) {
+    width: calc(100% - 80px);
+  }
 }
 
 section {
-   padding-block: 10px;
+  padding: {
+    top: 32px;
+  }
+  .container {
+    padding-bottom: 32px;
+  };
+  &:not(:last-child) {
+    .container {
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
 
-   @include media-query(gt-xs) {
-      padding-block: 15px;
-   }
-   @include media-query(gt-md) {
-      padding-block: 30px;
-   }
 }
 
-//================================
-// Landing Bg
-//================================
 
-.pos__absolute {
-   position: absolute;
+// Lists
+.rows-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  list-style-position: outside;
+
+  li {
+    margin-left: 23.3667px;
+
+    padding-left: 18px;
+    &::marker {
+      color: $dark-Raspberry;
+    }
+  }
 }
-.d-flex {
-   display: flex;
+.disc-list {
+  list-style-type: disc;
 }
-.flex__center {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.d-none {
-   display: none;
+.decimal-list {
+  list-style-type: decimal;
+  li {
+    &::marker {
+      font-weight: bold;
+    }
+  }
 }
