@@ -2,7 +2,7 @@
 
 ![Screenshot](/docs/screenshots/Screenshot.png)
 
-Responsive Recipe page designed with HTML and SASS coded by [Abdel-Rahman](https://github.com/abdelrahman-mh), You can find it here [Live-demo]()
+Responsive Recipe page designed with HTML and SASS coded by [Abdel-Rahman](https://github.com/abdelrahman-mh), You can find it here [Live-demo](https://abdelrahman-mh.github.io/recipe-page/)
 
 ## Usage
 
@@ -28,4 +28,4 @@ Responsive Recipe page designed with HTML and SASS coded by [Abdel-Rahman](https
 
 
 ## Links
-[Website]()
+[Website](https://abdelrahman-mh.github.io/recipe-page/)
