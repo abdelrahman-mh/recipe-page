@@ -1,0 +1,69 @@
+// Media aliases and breakpoints
+$screen-sm-min: 600px;
+$screen-md-min: 960px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1441px;
+$screen-xs-max: 599px;
+$screen-sm-max: 959px;
+$screen-md-max: 1279px;
+$screen-lg-max: 1440px;
+$screen-xl-max: 5000px;
+
+// Media query mixin
+@mixin media-query($query-type) {
+   @if $query-type == xs {
+      @media screen and (max-width: #{$screen-xs-max}) {
+         @content;
+      }
+   } @else if $query-type == sm {
+      @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+         @content;
+      }
+   } @else if $query-type == md {
+      @media screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+         @content;
+      }
+   } @else if $query-type == lg {
+      @media screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+         @content;
+      }
+   } @else if $query-type == xl {
+      @media screen and (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {
+         @content;
+      }
+   } @else if $query-type == lt-sm {
+      @media screen and (max-width: #{$screen-xs-max}) {
+         @content;
+      }
+   } @else if $query-type == lt-md {
+      @media screen and (max-width: #{$screen-sm-max}) {
+         @content;
+      }
+   } @else if $query-type == lt-lg {
+      @media screen and (max-width: #{$screen-md-max}) {
+         @content;
+      }
+   } @else if $query-type == lt-xl {
+      @media screen and (max-width: #{$screen-lg-max}) {
+         @content;
+      }
+   } @else if $query-type == gt-xs {
+      @media screen and (min-width: #{$screen-sm-min}) {
+         @content;
+      }
+   } @else if $query-type == gt-sm {
+      @media screen and (min-width: #{$screen-md-min}) {
+         @content;
+      }
+   } @else if $query-type == gt-md {
+      @media screen and (min-width: #{$screen-lg-min}) {
+         @content;
+      }
+   } @else if $query-type == gt-lg {
+      @media screen and (min-width: #{$screen-xl-min}) {
+         @content;
+      }
+   } @else {
+      @warn "Unknown query type: #{$query-type}.";
+   }
+}

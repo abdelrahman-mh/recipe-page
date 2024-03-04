@@ -1,0 +1,9 @@
+@import './base/reset';
+@import './variables';
+@import './utils/mixins';
+
+@import './base/global';
+@import './base/typography';
+
+// component
+@import './components/landing';

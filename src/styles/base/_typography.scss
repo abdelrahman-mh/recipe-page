@@ -1,0 +1,34 @@
+.fs-young {
+   font-family: $young-serif-font;
+}
+.fs-outfit {
+   font-family: $outfit-font;
+}
+.h-lg {
+   font-family: $young-serif-font;
+   font-size: 30px;
+   font-weight: 400;
+   @include media-query(gt-xs){
+      font-size: 50px;
+   }
+
+}
+.h-md {
+   font-family: $young-serif-font;
+   font-size: 30;
+}
+.h-sm {
+   font-family: $outfit-font;
+   font-size: 18px;
+}
+.m-p {
+   font-family: $outfit-font;
+   font-size: 16px;
+   > span {
+      font-weight: 700;
+   }
+}
+.m-p {
+   font-family: $outfit-font;
+   font-size: 16px;
+}

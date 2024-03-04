@@ -1,0 +1,68 @@
+body {
+   background-color: $white;
+}
+
+.container {
+   margin: auto;
+   position: relative;
+   border: 2px dashed black;
+
+   @include media-query(gt-xs) {
+      padding: {
+         left: 40px;
+         right: 40px;
+      }
+   }
+   @include media-query(gt-sm) {
+      padding: {
+         left: 60px;
+         right: 60px;
+      }
+   }
+   @include media-query(lt-xl) {
+      width: 100%;
+   }
+   @include media-query(gt-lg) {
+      width: 1440px;
+   }
+   // section {
+   //    padding: 20px;
+   //    margin-bottom: 20px;
+   // }
+}
+
+.flex__center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+section {
+   padding-block: 10px;
+
+   @include media-query(gt-xs) {
+      padding-block: 15px;
+   }
+   @include media-query(gt-md) {
+      padding-block: 30px;
+   }
+}
+
+//================================
+// Landing Bg
+//================================
+
+.pos__absolute {
+   position: absolute;
+}
+.d-flex {
+   display: flex;
+}
+.flex__center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.d-none {
+   display: none;
+}
