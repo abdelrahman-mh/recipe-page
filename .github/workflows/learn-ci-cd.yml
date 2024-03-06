@@ -1,6 +1,10 @@
 name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -8,12 +12,13 @@ jobs:
     permissions:
       contents: read
       packages: read
-      # To report GitHub Actions status checks
       statuses: write
 
     steps:
-      - name: checkout code
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Super-linter
         uses: github/super-linter@v6.3.0
+        env:
+          RUN_LOCAL: true
