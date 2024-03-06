@@ -1,26 +1,13 @@
 name: learn-github-actions
-
-on:
-  push:
-    branches:
-      - main
-
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
 jobs:
-  lint:
+  check-bats-version:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: read
-      statuses: write
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          ref: main
-
-      - name: Super-linter
-        uses: super-linter/super-linter@v6
-        env:
-          RUN_LOCAL: true
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
